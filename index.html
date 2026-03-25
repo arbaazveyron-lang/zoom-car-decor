@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Zoom Car Decor – Premium Car Accessories, Bangalore</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1565C0;--blue2:#2196F3;--blue3:#42A5F5;
+  --black:#080C14;--dark:#0D1421;--card:#111827;
+  --white:#fff;--muted:#8ba3c7;--border:rgba(33,150,243,.18);--gold:#FFD700;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--dark)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:9999;background:rgba(8,12,20,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none}
+.logo-words{display:flex;flex-direction:column;line-height:1.1}
+.logo-zoom{font-size:1.3rem;font-weight:900;letter-spacing:3px;background:linear-gradient(90deg,#fff,var(--blue3));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo-sub{font-size:.6rem;font-weight:700;letter-spacing:4px;color:var(--blue3);text-transform:uppercase}
+.nav-links{list-style:none;display:flex;gap:4px;align-items:center}
+.nav-links li a{padding:8px 14px;border-radius:6px;font-size:.88rem;font-weight:600;color:var(--muted);transition:.2s;display:block;text-decoration:none}
+.nav-links li a:hover{color:var(--white);background:rgba(33,150,243,.15)}
+.nav-call{background:linear-gradient(135deg,var(--blue),var(--blue2))!important;color:#fff!important;padding:9px 18px!important;box-shadow:0 4px 15px rgba(33,150,243,.4)!important;border-radius:8px!important}
+.nav-call:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(33,150,243,.6)!important}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.ham span{width:24px;height:2px;background:#fff;border-radius:2px;display:block}
+.mob{display:none;flex-direction:column;background:rgba(8,12,20,.98);border-bottom:1px solid var(--border);padding:12px 24px 20px}
+.mob a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.95rem;font-weight:600;color:var(--muted);text-decoration:none;display:block}
+.mob a:hover{color:#fff}
+.mob-open{display:flex}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding-top:70px;background:radial-gradient(ellipse at 50% 0%,#0a1f40,var(--black) 65%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(33,150,243,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(33,150,243,.06) 1px,transparent 1px);background-size:50px 50px}
+.hero-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(33,150,243,.14),transparent 65%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:840px;padding:0 24px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(33,150,243,.1);border:1px solid rgba(33,150,243,.3);border-radius:30px;padding:7px 18px;font-size:.82rem;color:var(--blue3);font-weight:600;margin-bottom:28px}
+.dot{width:7px;height:7px;background:var(--blue2);border-radius:50%;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1.1;margin-bottom:20px;letter-spacing:-1px}
+.grad{background:linear-gradient(135deg,var(--blue3),#90CAF9,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.05rem;color:var(--muted);max-width:560px;margin:0 auto 36px;line-height:1.75}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+.btn{padding:13px 28px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:.25s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 6px 24px rgba(33,150,243,.4)}
+.btn-blue:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(33,150,243,.55)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.btn-white{background:#fff;color:var(--blue);font-weight:800}
+.btn-white:hover{background:#e8f0fe;transform:translateY(-2px)}
+.stats-row{display:flex;justify-content:center;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:600px;margin:0 auto}
+.stat{flex:1;padding:18px 12px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border:none}
+.stat-num{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--blue3),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.container{max-width:1200px;margin:auto}
+.eyebrow{font-size:.74rem;font-weight:700;color:var(--blue3);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.sec-h{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:900;margin-bottom:12px;letter-spacing:-.5px}
+.sec-p{color:var(--muted);font-size:.97rem;max-width:500px;line-height:1.75;margin-bottom:48px}
+.bg-dark{background:var(--dark)}
+
+/* GALLERY */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:240px 240px;gap:12px}
+.pitem{border-radius:14px;overflow:hidden;position:relative;cursor:pointer;border:1px solid var(--border)}
+.pitem img{width:100%;height:100%;object-fit:cover;transition:.4s;display:block}
+.pitem:hover img{transform:scale(1.06)}
+.pitem::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,12,20,.55),transparent 55%);pointer-events:none}
+.pitem.tall{grid-row:span 2}
+.pcap{position:absolute;bottom:12px;left:12px;z-index:2;font-size:.76rem;font-weight:700;color:rgba(255,255,255,.85);background:rgba(8,12,20,.55);padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.12)}
+.pzoom{position:absolute;top:12px;right:12px;z-index:2;background:rgba(33,150,243,.7);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:.85rem;opacity:0;transition:.3s}
+.pitem:hover .pzoom{opacity:1}
+
+/* SERVICES */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.scard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:.3s;cursor:pointer;position:relative;overflow:hidden;text-decoration:none;display:block;color:inherit}
+.scard::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(33,150,243,.07),transparent);opacity:0;transition:.3s}
+.scard:hover{border-color:rgba(33,150,243,.5);transform:translateY(-5px);box-shadow:0 12px 40px rgba(33,150,243,.2)}
+.scard:hover::before{opacity:1}
+.sico{width:50px;height:50px;background:rgba(33,150,243,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;border:1px solid rgba(33,150,243,.2)}
+.stit{font-size:.98rem;font-weight:800;margin-bottom:7px}
+.sdesc{font-size:.84rem;color:var(--muted);line-height:1.65}
+.sarr{position:absolute;top:22px;right:20px;color:var(--blue3);opacity:0;transition:.3s;font-size:1.1rem}
+.scard:hover .sarr{opacity:1;transform:translateX(3px)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.aimg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.aimg{border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer}
+.aimg img{width:100%;height:175px;object-fit:cover;display:block;transition:.3s}
+.aimg:hover img{transform:scale(1.05)}
+.aimg.tall{grid-row:span 2}
+.aimg.tall img{height:100%}
+.atag{display:inline-flex;align-items:center;gap:7px;background:rgba(33,150,243,.1);border:1px solid rgba(33,150,243,.25);border-radius:20px;padding:5px 14px;font-size:.78rem;color:var(--blue3);font-weight:600;margin-bottom:18px}
+.feats{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.feat{display:flex;align-items:flex-start;gap:13px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:13px 15px;transition:.2s}
+.feat:hover{border-color:rgba(33,150,243,.3);background:rgba(33,150,243,.05)}
+.fico{width:36px;height:36px;background:rgba(33,150,243,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;border:1px solid rgba(33,150,243,.2)}
+.feat strong{display:block;font-size:.88rem;margin-bottom:2px}
+.feat span{font-size:.8rem;color:var(--muted)}
+
+/* REVIEWS */
+.rsum{display:flex;align-items:center;gap:28px;background:linear-gradient(135deg,rgba(33,150,243,.1),rgba(33,150,243,.04));border:1px solid rgba(33,150,243,.25);border-radius:20px;padding:28px 32px;margin-bottom:36px;flex-wrap:wrap}
+.bigr{font-size:4.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,#fff,var(--blue3));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stars{color:var(--gold);font-size:1.5rem;margin-bottom:4px}
+.gv{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 11px;font-size:.76rem;color:var(--muted);text-decoration:none}
+.bars{flex:1;min-width:160px;display:flex;flex-direction:column;gap:8px}
+.brow{display:flex;align-items:center;gap:10px}
+.blbl{font-size:.76rem;color:var(--muted);width:20px;text-align:right}
+.btrack{flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.bfill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--blue3))}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.rcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;transition:.2s}
+.rcard:hover{border-color:rgba(33,150,243,.3);transform:translateY(-3px)}
+.rstars{color:var(--gold);font-size:.9rem;margin-bottom:10px}
+.rtext{font-size:.86rem;color:#b0c4de;line-height:1.75;font-style:italic;margin-bottom:14px}
+.rauth{font-size:.8rem;font-weight:700;color:var(--blue3)}
+
+/* CONTACT */
+.hcgrid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.hcard,.ccard{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.hhead,.chead{padding:16px 22px;background:rgba(33,150,243,.08);border-bottom:1px solid var(--border);font-weight:800;font-size:.9rem;display:flex;align-items:center;gap:8px}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.86rem}
+.hrow:last-child{border:none}
+.hrow.today{background:rgba(33,150,243,.07)}
+.dname{font-weight:600}
+.opn{color:#4ade80;font-weight:700;font-size:.8rem}
+.cls{color:#f87171;font-weight:700;font-size:.8rem}
+.citem{display:flex;align-items:flex-start;gap:14px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.04);transition:.15s;text-decoration:none;color:inherit}
+.citem:last-child{border:none}
+.citem:hover{background:rgba(33,150,243,.06)}
+.cico{width:40px;height:40px;background:rgba(33,150,243,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;border:1px solid rgba(33,150,243,.18)}
+.clbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.cval{font-size:.88rem;font-weight:600;color:var(--white)}
+.cval small{color:var(--muted);font-weight:400}
+.dirbtn{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:700;padding:14px;border-radius:12px;margin-top:14px;font-size:.92rem;transition:.25s;text-decoration:none}
+.dirbtn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(33,150,243,.4)}
+.mapbox{border-radius:12px;overflow:hidden;margin-top:14px;border:1px solid var(--border)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#0a1f40,#0d2d5e,#0a1f40);text-align:center;padding:72px 24px;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(33,150,243,.16),transparent 65%)}
+.cta h2{font-size:2.2rem;font-weight:900;margin-bottom:12px;position:relative}
+.cta p{color:rgba(255,255,255,.7);margin-bottom:30px;font-size:1rem;position:relative}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+
+/* FOOTER */
+footer{background:#04070f;border-top:1px solid var(--border);padding:40px 24px 22px}
+.fgrid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:30px}
+.fbp{color:var(--muted);font-size:.86rem;line-height:1.7;margin:12px 0 16px}
+.ftit{font-size:.76rem;font-weight:800;color:var(--blue3);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.flinks{display:flex;flex-direction:column;gap:9px}
+.flinks a{font-size:.86rem;color:var(--muted);text-decoration:none;transition:.2s}
+.flinks a:hover{color:#fff}
+.fcopy{max-width:1200px;margin:0 auto;text-align:center;color:var(--muted);font-size:.76rem;border-top:1px solid rgba(255,255,255,.05);padding-top:20px}
+
+/* LIGHTBOX */
+#lb{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.93);align-items:center;justify-content:center}
+#lb.show{display:flex}
+.lbimg{max-width:88vw;max-height:84vh;border-radius:12px;border:2px solid var(--border);object-fit:contain}
+.lbclose{position:absolute;top:20px;right:28px;font-size:2rem;color:#fff;cursor:pointer;opacity:.7;transition:.2s;background:none;border:none;z-index:2}
+.lbclose:hover{opacity:1}
+.lbprev,.lbnext{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.4rem;color:#fff;transition:.2s;user-select:none;z-index:2}
+.lbprev:hover,.lbnext:hover{background:rgba(33,150,243,.35)}
+.lbprev{left:20px}.lbnext{right:20px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .pgrid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .pitem.tall{grid-row:span 1}
+  .about-grid{grid-template-columns:1fr}
+  .hcgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .ham{display:flex}
+  .pgrid{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
+  .stats-row{flex-wrap:wrap}
+  .stat{min-width:120px}
+  .fgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <button class="lbclose" id="lbclose">✕</button>
+  <button class="lbprev" id="lbprev">‹</button>
+  <img class="lbimg" id="lbimg" src="" alt=""/>
+  <button class="lbnext" id="lbnext">›</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#home">
+      <svg width="48" height="48" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 8px rgba(33,150,243,.6))">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/></linearGradient>
+          <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#90CAF9"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+        </defs>
+        <path d="M27 3L48 11L48 30Q48 44 27 51Q6 44 6 30L6 11Z" fill="url(#g1)"/>
+        <path d="M27 7L44 14L44 29Q44 41 27 47Q10 41 10 29L10 14Z" fill="#0a1830" opacity=".7"/>
+        <path d="M14 30Q15 26 20 25L24 22Q26 21 30 21L34 21Q37 21 39 24L41 27Q42 28 42 30L42 33Q40 34 38 33L16 33Q14 32 14 30Z" fill="url(#g2)"/>
+        <path d="M22 25L25 22Q27 21 31 21L34 22L37 25L29 25Z" fill="#1565C0" opacity=".8"/>
+        <path d="M39 24L43 22L44 25L41 26Z" fill="url(#g2)"/>
+        <circle cx="20" cy="33" r="3.5" fill="#0a1830" stroke="#42A5F5" stroke-width="1.2"/>
+        <circle cx="20" cy="33" r="1.5" fill="#42A5F5"/>
+        <circle cx="36" cy="33" r="3.5" fill="#0a1830" stroke="#42A5F5" stroke-width="1.2"/>
+        <circle cx="36" cy="33" r="1.5" fill="#42A5F5"/>
+        <line x1="9" y1="29" x2="13" y2="29" stroke="#42A5F5" stroke-width="1.2" stroke-linecap="round" opacity=".6"/>
+        <line x1="9" y1="31" x2="12" y2="31" stroke="#42A5F5" stroke-width=".9" stroke-linecap="round" opacity=".4"/>
+        <text x="27" y="46" font-size="5" font-weight="900" fill="url(#g2)" text-anchor="middle" font-family="Segoe UI,sans-serif">ZCD</text>
+      </svg>
+      <div class="logo-words">
+        <span class="logo-zoom">ZOOM</span>
+        <span class="logo-sub">Car Decor</span>
+      </div>
+    </a>
+    <button class="ham" id="hamBtn">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+919845077846" class="nav-call">📞 Call Now</a></li>
+    </ul>
+  </div>
+  <div class="mob" id="mobMenu">
+    <a href="#gallery">📸 Gallery</a>
+    <a href="#services">🛠 Services</a>
+    <a href="#about">ℹ️ About</a>
+    <a href="#reviews">⭐ Reviews</a>
+    <a href="#contact">📍 Contact</a>
+    <a href="tel:+919845077846" style="color:#42A5F5;font-weight:800">📞 +91 98450 77846</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="badge"><span class="dot"></span> Jakkur Layout, Bangalore · Trusted Auto Accessories</div>
+    <h1>Drive in Style with<br><span class="grad">Premium Car Decor</span><br>& Accessories</h1>
+    <p>Seat covers, 7D mats, sun films, audio systems & full interior makeovers — expert fitment, top quality, unbeatable prices.</p>
+    <div class="hero-btns">
+      <a href="tel:+919845077846" class="btn btn-blue">📞 Call +91 98450 77846</a>
+      <a href="#gallery" class="btn btn-ghost">📸 View Gallery</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">4.7★</div><div class="stat-lbl">Google Rating</div></div>
+      <div class="stat"><div class="stat-num">99+</div><div class="stat-lbl">Reviews</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-lbl">Days Open</div></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-lbl">Yrs Exp</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="bg-dark" id="gallery">
+  <div class="container">
+    <div class="eyebrow">Our Shop & Work</div>
+    <h2 class="sec-h">Photo Gallery</h2>
+    <p class="sec-p">Real photos from Google — click any image to view full size.</p>
+    <div class="pgrid">
+      <div class="pitem tall" data-i="0">
+        <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNGTSrf1HhLp6SXLuD82KzffCwhK6-FRs7OVWLSwmtVWpnyo6PCVv4GTwVZaCqVdAdqQjwJyMnLdQA8zriQyckr0zDPRfexrpfLpYcWLM7IUgm-rmHdCUlR30DFkInEMbcY66Pj9wCrNYQOGBeyZ1DJyfg=s4800-w800-h600" alt="Shop Front" loading="lazy"/>
+        <div class="pcap">Shop Front</div><div class="pzoom">🔍</div>
+      </div>
+      <div class="pitem" data-i="1">
+        <img src="https://lh3.googleusercontent.com/places/ANXAkqEwbObM4P-CEJFEfUSpNSKX45YxknFtDCcikaVM_sQMBvh-7lKUYQZv85nhzfIIRVSgFzywsfDBtiG5cPJYp2JPpQz1gqmDZZU=s4800-w519-h519" alt="Products" loading="lazy"/>
+        <div class="pcap">Products</div><div class="pzoom">🔍</div>
+      </div>
+      <div class="pitem" data-i="2">
+        <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNGXmre-p8KWCE4wHg3ilVPpefrK2hEdYbxti1rG7r2gVCSzbeS-DNSJwkPMpkCLYNLEarooDlfjMwOoBoS2fsxFj29GlYIyDTjiSaoiiFqwbX_r2TQCMO1Kquy3t1ihbIc4xVc84dCB5THr=s4800-w800-h600" alt="Interior Work" loading="lazy"/>
+        <div class="pcap">Interior Work</div><div class="pzoom">🔍</div>
+      </div>
+      <div class="pitem" data-i="3">
+        <img src="https://lh3.googleusercontent.com/places/ANXAkqEFwtW1B9odX5OhwpkNVkwlD6RMDhcmpZe0F-fGqnsZLnsHDw3e0HUt2ds1gujPiKt0MAUUH6PRVufyPjFpU7nai5IQTVrhc9Y=s4800-w640-h600" alt="Seat Covers" loading="lazy"/>
+        <div class="pcap">Seat Covers</div><div class="pzoom">🔍</div>
+      </div>
+      <div class="pitem" data-i="4">
+        <img src="https://lh3.googleusercontent.com/places/ANXAkqED3H5tdUGFvnjA9FlBHLkJ0VwwXCfsyzjlQt0KF3SBwmDXxFMfRyPzC4mKU9cmloU47BVQ3HWpggu1oCrMNfw21fGnoQizWdc=s4800-w800-h600" alt="Accessories" loading="lazy"/>
+        <div class="pcap">Accessories</div><div class="pzoom">🔍</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="eyebrow">What We Offer</div>
+    <h2 class="sec-h">Services & Products</h2>
+    <p class="sec-p">Precision fitment, top brands, transparent pricing — everything your car needs.</p>
+    <div class="sgrid">
+      <a href="tel:+919845077846" class="scard"><div class="sico">🪑</div><div class="stit">Leather Seat Covers</div><div class="sdesc">Custom-fitted leather & fabric seat covers. Multiple colours & budget options for every car model.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🛡️</div><div class="stit">7D Floor Mats</div><div class="sdesc">Premium 7D mats for complete floor protection. Waterproof, easy to clean, perfect OEM fit.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🌞</div><div class="stit">Sun Films / Tinting</div><div class="sdesc">High-quality window tinting to cut UV rays, glare, and heat — clean, polished finish.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🔊</div><div class="stit">Car Audio Systems</div><div class="sdesc">Pioneer, Mac Audio & 2-way speakers — pro installation for an immersive sound experience.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🎯</div><div class="stit">Steering Covers</div><div class="sdesc">Ergonomic steering wheel covers for better grip, comfort, and a sporty cockpit feel.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🚪</div><div class="stit">Door Guards & Garnish</div><div class="sdesc">Steel door step garnish and edge guards to protect doors from scratches and dings.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">🪟</div><div class="stit">Window Visors</div><div class="sdesc">Side window deflectors for rain protection with a clean, factory-style OEM finish.</div><div class="sarr">→</div></a>
+      <a href="tel:+919845077846" class="scard"><div class="sico">✨</div><div class="stit">Interior Accessories</div><div class="sdesc">Complete interior upgrades — wheel caps, trims, panels, and all automobile accessories.</div><div class="sarr">→</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bg-dark" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="aimg-grid">
+        <div class="aimg tall" data-i="0"><img src="https://lh3.googleusercontent.com/place-photos/AL8-SNGTSrf1HhLp6SXLuD82KzffCwhK6-FRs7OVWLSwmtVWpnyo6PCVv4GTwVZaCqVdAdqQjwJyMnLdQA8zriQyckr0zDPRfexrpfLpYcWLM7IUgm-rmHdCUlR30DFkInEMbcY66Pj9wCrNYQOGBeyZ1DJyfg=s4800-w800-h600" alt="Shop"/></div>
+        <div class="aimg" data-i="3"><img src="https://lh3.googleusercontent.com/places/ANXAkqEFwtW1B9odX5OhwpkNVkwlD6RMDhcmpZe0F-fGqnsZLnsHDw3e0HUt2ds1gujPiKt0MAUUH6PRVufyPjFpU7nai5IQTVrhc9Y=s4800-w640-h600" alt="Seat Covers"/></div>
+        <div class="aimg" data-i="4"><img src="https://lh3.googleusercontent.com/places/ANXAkqED3H5tdUGFvnjA9FlBHLkJ0VwwXCfsyzjlQt0KF3SBwmDXxFMfRyPzC4mKU9cmloU47BVQ3HWpggu1oCrMNfw21fGnoQizWdc=s4800-w800-h600" alt="Accessories"/></div>
+      </div>
+      <div>
+        <div class="atag">🏆 Bangalore's Trusted Auto Accessories Shop</div>
+        <div class="eyebrow">About Us</div>
+        <h2 class="sec-h">Passionate About Your Car</h2>
+        <p style="color:var(--muted);line-height:1.85;margin-bottom:12px;font-size:.93rem">Located at <strong style="color:#fff">442, 12 Cross, New Airport Road, Jakkur Layout</strong> — next to Mahindra Service Center — Zoom Car Decor is Bangalore's trusted destination for premium car accessories and interior customization.</p>
+        <p style="color:var(--muted);line-height:1.85;font-size:.93rem">Led by <strong style="color:var(--blue3)">Mr. Mohammed Eas</strong>, our team delivers exceptional workmanship with complete transparency on pricing. We treat every car with the care it deserves.</p>
+        <div class="feats">
+          <div class="feat"><div class="fico">🎯</div><div><strong>Expert Fitment</strong><span>Precision installation, clean finishes every time</span></div></div>
+          <div class="feat"><div class="fico">💎</div><div><strong>Quality Materials Only</strong><span>Pioneer, Mac Audio, premium leathers & trusted brands</span></div></div>
+          <div class="feat"><div class="fico">🤝</div><div><strong>Friendly Expert Advice</strong><span>Mohammed guides you to the best choice for your budget</span></div></div>
+          <div class="feat"><div class="fico">⏰</div><div><strong>Always On Time</strong><span>We respect your schedule and deliver as promised</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="eyebrow">Customer Reviews</div>
+    <h2 class="sec-h">What Customers Say</h2>
+    <p class="sec-p">Genuine Google reviews — 99 happy car owners and counting.</p>
+    <div class="rsum">
+      <div>
+        <div class="bigr">4.7</div>
+        <div class="stars">★★★★★</div>
+        <a class="gv" href="https://maps.google.com/?cid=606343926042476125" target="_blank">🌐 99 Verified Google Reviews ↗</a>
+      </div>
+      <div class="bars">
+        <div class="brow"><span class="blbl">5★</span><div class="btrack"><div class="bfill" style="width:80%"></div></div></div>
+        <div class="brow"><span class="blbl">4★</span><div class="btrack"><div class="bfill" style="width:14%"></div></div></div>
+        <div class="brow"><span class="blbl">3★</span><div class="btrack"><div class="bfill" style="width:4%"></div></div></div>
+        <div class="brow"><span class="blbl">2★</span><div class="btrack"><div class="bfill" style="width:1%"></div></div></div>
+        <div class="brow"><span class="blbl">1★</span><div class="btrack"><div class="bfill" style="width:1%"></div></div></div>
+      </div>
+      <a href="https://maps.google.com/?cid=606343926042476125" target="_blank" class="btn btn-blue" style="font-size:.86rem;padding:10px 18px">📝 Read All Reviews</a>
+    </div>
+    <div class="rgrid">
+      <div class="rcard"><div class="rstars">★★★★★</div><div class="rtext">"Excellent work — done my Grand Vitara interior: leather seat cover, steering wheel, 7D mats, door guards, steel door step garnish in very reasonable price. Owner is very user-friendly and never compromises on quality. Highly recommended!"</div><div class="rauth">— Verified Google Customer</div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><div class="rtext">"We got Seat Covers, Floor mat, Sun films and Window visors fitted at Zoom Car. Work was done with exceptional care and timely manner. Mr. Mohammed Eas was very friendly and suggested right things for our car. Very reasonable rates. Highly recommend!"</div><div class="rauth">— Verified Google Customer</div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><div class="rtext">"Mohammed helped us understand the types of material for seat covers and suggested the best in our budget. Team is punctual and followed timelines as discussed. The output was exactly as designed and expected. I would surely recommend."</div><div class="rauth">— Verified Google Customer</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="bg-dark" id="contact">
+  <div class="container">
+    <div class="eyebrow">Find Us</div>
+    <h2 class="sec-h">Hours & Contact</h2>
+    <p class="sec-p">Open 6 days a week at Jakkur Layout — next to Mahindra Service Center.</p>
+    <div class="hcgrid">
+      <div class="hcard">
+        <div class="hhead">🕐 Opening Hours</div>
+        <div class="hrow today"><span class="dname">Monday</span><span class="opn">● 10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Tuesday</span><span style="color:var(--muted);font-size:.83rem">10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Wednesday</span><span style="color:var(--muted);font-size:.83rem">10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Thursday</span><span style="color:var(--muted);font-size:.83rem">10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Friday</span><span style="color:var(--muted);font-size:.83rem">10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Saturday</span><span style="color:var(--muted);font-size:.83rem">10:30 AM – 8:30 PM</span></div>
+        <div class="hrow"><span class="dname">Sunday</span><span class="cls">✕ Closed</span></div>
+      </div>
+      <div>
+        <div class="ccard">
+          <div class="chead">📋 Contact Details</div>
+          <a href="https://maps.google.com/?cid=606343926042476125" target="_blank" class="citem">
+            <div class="cico">📍</div>
+            <div><div class="clbl">Address</div><div class="cval">442, 12 Cross, New Airport Road<br>Jakkur Layout, Bengaluru 560064<br><small>Next to Mahindra Service Center</small></div></div>
+          </a>
+          <a href="tel:+919845077846" class="citem">
+            <div class="cico">📞</div>
+            <div><div class="clbl">Phone</div><div class="cval">+91 98450 77846</div></div>
+          </a>
+          <a href="https://maps.google.com/?cid=606343926042476125" target="_blank" class="citem">
+            <div class="cico">⭐</div>
+            <div><div class="clbl">Google Rating</div><div class="cval">4.7 / 5 · 99 Reviews ↗</div></div>
+          </a>
+        </div>
+        <a href="https://maps.google.com/?cid=606343926042476125" target="_blank" class="dirbtn">📍 Get Directions on Google Maps</a>
+        <div class="mapbox">
+          <iframe width="100%" height="210" style="border:0;display:block" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=Zoom+Car+Decor+Jakkur+Bangalore+560064">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Ready to Transform Your Car?</h2>
+  <p>Call us for a free consultation — best accessories within your budget.</p>
+  <div class="cta-btns">
+    <a href="tel:+919845077846" class="btn btn-white">📞 Call +91 98450 77846</a>
+    <a href="https://maps.google.com/?cid=606343926042476125" target="_blank" class="btn btn-ghost">📍 Get Directions</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fgrid">
+    <div>
+      <a class="logo" href="#home" style="display:inline-flex">
+        <svg width="42" height="42" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/></linearGradient>
+            <linearGradient id="fg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#90CAF9"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+          </defs>
+          <path d="M27 3L48 11L48 30Q48 44 27 51Q6 44 6 30L6 11Z" fill="url(#fg1)"/>
+          <path d="M27 7L44 14L44 29Q44 41 27 47Q10 41 10 29L10 14Z" fill="#0a1830" opacity=".7"/>
+          <path d="M14 30Q15 26 20 25L24 22Q26 21 30 21L34 21Q37 21 39 24L41 27Q42 28 42 30L42 33Q40 34 38 33L16 33Q14 32 14 30Z" fill="url(#fg2)"/>
+          <path d="M22 25L25 22Q27 21 31 21L34 22L37 25L29 25Z" fill="#1565C0" opacity=".8"/>
+          <circle cx="20" cy="33" r="3.5" fill="#0a1830" stroke="#42A5F5" stroke-width="1.2"/>
+          <circle cx="20" cy="33" r="1.5" fill="#42A5F5"/>
+          <circle cx="36" cy="33" r="3.5" fill="#0a1830" stroke="#42A5F5" stroke-width="1.2"/>
+          <circle cx="36" cy="33" r="1.5" fill="#42A5F5"/>
+          <text x="27" y="46" font-size="5" font-weight="900" fill="url(#fg2)" text-anchor="middle" font-family="Segoe UI,sans-serif">ZCD</text>
+        </svg>
+        <div class="logo-words" style="margin-left:10px">
+          <span class="logo-zoom">ZOOM</span>
+          <span class="logo-sub">Car Decor</span>
+        </div>
+      </a>
+      <p class="fbp">Bangalore's trusted destination for premium car accessories, seat covers, 7D mats, audio systems and full interior upgrades.</p>
+      <a href="tel:+919845077846" style="color:var(--blue3);font-weight:700;font-size:.88rem">📞 +91 98450 77846</a>
+    </div>
+    <div>
+      <div class="ftit">Quick Links</div>
+      <div class="flinks">
+        <a href="#gallery">📸 Gallery</a>
+        <a href="#services">🛠 Services</a>
+        <a href="#about">ℹ️ About Us</a>
+        <a href="#reviews">⭐ Reviews</a>
+        <a href="#contact">📍 Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="ftit">Visit Us</div>
+      <p style="color:var(--muted);font-size:.84rem;line-height:1.8">442, 12 Cross<br>New Airport Road Layout<br>Jakkur, Bengaluru 560064<br><em style="font-size:.8rem">Next to Mahindra Service Center</em></p>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:12px">Mon–Sat: 10:30 AM – 8:30 PM<br><span style="color:#f87171">Sunday: Closed</span></p>
+    </div>
+  </div>
+  <div class="fcopy">© 2026 Zoom Car Decor · All data & photos sourced from Google Business Profile · Jakkur, Bengaluru</div>
+</footer>
+
+<script>
+var photos=[
+  "https://lh3.googleusercontent.com/place-photos/AL8-SNGTSrf1HhLp6SXLuD82KzffCwhK6-FRs7OVWLSwmtVWpnyo6PCVv4GTwVZaCqVdAdqQjwJyMnLdQA8zriQyckr0zDPRfexrpfLpYcWLM7IUgm-rmHdCUlR30DFkInEMbcY66Pj9wCrNYQOGBeyZ1DJyfg=s4800-w800-h600",
+  "https://lh3.googleusercontent.com/places/ANXAkqEwbObM4P-CEJFEfUSpNSKX45YxknFtDCcikaVM_sQMBvh-7lKUYQZv85nhzfIIRVSgFzywsfDBtiG5cPJYp2JPpQz1gqmDZZU=s4800-w519-h519",
+  "https://lh3.googleusercontent.com/place-photos/AL8-SNGXmre-p8KWCE4wHg3ilVPpefrK2hEdYbxti1rG7r2gVCSzbeS-DNSJwkPMpkCLYNLEarooDlfjMwOoBoS2fsxFj29GlYIyDTjiSaoiiFqwbX_r2TQCMO1Kquy3t1ihbIc4xVc84dCB5THr=s4800-w800-h600",
+  "https://lh3.googleusercontent.com/places/ANXAkqEFwtW1B9odX5OhwpkNVkwlD6RMDhcmpZe0F-fGqnsZLnsHDw3e0HUt2ds1gujPiKt0MAUUH6PRVufyPjFpU7nai5IQTVrhc9Y=s4800-w640-h600",
+  "https://lh3.googleusercontent.com/places/ANXAkqED3H5tdUGFvnjA9FlBHLkJ0VwwXCfsyzjlQt0KF3SBwmDXxFMfRyPzC4mKU9cmloU47BVQ3HWpggu1oCrMNfw21fGnoQizWdc=s4800-w800-h600"
+];
+var cur=0;
+var lb=document.getElementById('lb');
+var lbimg=document.getElementById('lbimg');
+
+// Gallery clicks
+document.querySelectorAll('.pitem, .aimg').forEach(function(el){
+  el.addEventListener('click',function(){
+    cur=parseInt(this.getAttribute('data-i'));
+    lbimg.src=photos[cur];
+    lb.classList.add('show');
+  });
+});
+
+document.getElementById('lbclose').addEventListener('click',function(){lb.classList.remove('show')});
+document.getElementById('lbprev').addEventListener('click',function(e){e.stopPropagation();cur=(cur-1+photos.length)%photos.length;lbimg.src=photos[cur]});
+document.getElementById('lbnext').addEventListener('click',function(e){e.stopPropagation();cur=(cur+1)%photos.length;lbimg.src=photos[cur]});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('show')});
+document.addEventListener('keydown',function(e){
+  if(!lb.classList.contains('show'))return;
+  if(e.key==='Escape')lb.classList.remove('show');
+  if(e.key==='ArrowRight'){cur=(cur+1)%photos.length;lbimg.src=photos[cur];}
+  if(e.key==='ArrowLeft'){cur=(cur-1+photos.length)%photos.length;lbimg.src=photos[cur];}
+});
+
+// Hamburger
+document.getElementById('hamBtn').addEventListener('click',function(){
+  var m=document.getElementById('mobMenu');
+  m.classList.toggle('mob-open');
+});
+document.querySelectorAll('.mob a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('mobMenu').classList.remove('mob-open')});
+});
+</script>
+</body>
+</html>
